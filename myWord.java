@@ -6,8 +6,11 @@ public class myWord implements Comparable<myWord>{
     
         this.word = word;
     }
-
-    //we're reversing alphabetical order here
+    /**
+     * we're reversing alphabetical order here
+     * @param otherWord object being compared
+     * 
+     */
     @Override
     public int compareTo(myWord otherWord){
 
