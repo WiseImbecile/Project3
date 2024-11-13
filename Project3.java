@@ -11,7 +11,11 @@ public class Project3 {
 
         SortTest test = new SortTest();
 
-        PrintWriter testing = test.create_file("This is a file. What's up");
+        File file = test.create_file("This is a file. What's uppppp");
+
+        test.read_file_and_sort(file);
+
+
 
 
 
