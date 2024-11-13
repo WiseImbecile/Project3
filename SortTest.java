@@ -2,20 +2,40 @@ import java.io.*;
 
 
 public class SortTest {
+    //creating file path
+    File file_path = new File("./input.txt");
     
-    public void create_file(){
-        File myFile = new File("./input.txt");
+    PrintWriter file = null;
+    public PrintWriter create_file(String file_content){
         try{
-            PrintWriter file = new PrintWriter(myFile);
+            //actually creating file using file_path
+            PrintWriter file = new PrintWriter(file_path);
+            //printing user defined contents into file
+            file.println(file_content);
             file.close();
+            
         }
-
+        //catch the file not found error
         catch(FileNotFoundException e){
             
         }
+        finally {
+            // Closing the file safely
+            if (file != null) {
+                file.close();
+            }
+        }
+        
+        return file;
+    }
+
+    public void read_file(PrintWriter file){
+
 
 
     }
+
+
    
 
 
