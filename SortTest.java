@@ -36,11 +36,15 @@ public class SortTest {
         return file_path;
     }
 
+    //new method
+
     public void read_file_and_sort(File file){
         int count = 0;
+        //reading file
+        Scanner scnr = null;
+        PrintWriter create_file = null;
         try{
-            //reading file
-            Scanner scnr = new Scanner(file);
+                scnr = new Scanner(file);
                 //figuring out how many words are in the file
                 while(scnr.hasNext()){
                     scnr.next();
@@ -61,14 +65,19 @@ public class SortTest {
 
                 }
                 
-                if(scnr != null){
-                    scnr.close();
-                }
+              
 
                 Arrays.sort(my_word_array);
 
 
                 // TODO: implement output.txt file 
+                File output_file = new File("./output.txt");
+                create_file = new PrintWriter(output_file);
+
+                for(int i = 0; i < my_word_array.length; i++){
+                    create_file.print(my_word_array[i] + " ");
+                }
+
 
 
 
@@ -77,7 +86,12 @@ public class SortTest {
         catch(FileNotFoundException e){
 
         }
-
+        finally{
+            if(scnr != null && create_file != null){
+                scnr.close();
+                create_file.close();
+            }
+        }
 
 
         

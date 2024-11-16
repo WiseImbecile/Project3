@@ -62,4 +62,11 @@ public class myWord implements Comparable<myWord>{
         //if thisChar equal otherChar
         return num;
     }
+
+    
+    @Override
+    public String toString() {
+        
+        return word;
+    }
 }

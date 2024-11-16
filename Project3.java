@@ -11,7 +11,7 @@ public class Project3 {
 
         SortTest test = new SortTest();
 
-        File file = test.create_file("This is a file. What's uppppp");
+        File file = test.create_file("A B C D E F G H I J K L M N O P Q R S T U V W X Y Z");
 
         test.read_file_and_sort(file);
 
