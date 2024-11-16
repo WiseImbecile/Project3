@@ -40,8 +40,18 @@ public class Project3 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
 
+        try {
+            // Read the dictionary file and get the words
+            String[] words = Composition2.readDictionaryFile();
+
+            // Check compositions for the words and write to composedMore.txt
+            Composition2.checkCompositions(words);
+
+            System.out.println("Compositions with three or more words have been written to composedMore.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        
+        }
     }
-    
 }

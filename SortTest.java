@@ -64,13 +64,12 @@ public class SortTest {
                     my_word_array[i] = convert_word;
 
                 }
-                
               
-
+                //sorting
                 Arrays.sort(my_word_array);
 
 
-                // TODO: implement output.txt file 
+                //create output file
                 File output_file = new File("./output.txt");
                 create_file = new PrintWriter(output_file);
 

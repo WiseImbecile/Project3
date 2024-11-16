@@ -2,7 +2,9 @@ import java.io.*;
 
 public class Composition {
 
-    // This method will read words from the dictionary and check for possible compositions
+    /**This method will read words from the dictionary and check for possible compositions
+     * @param words string array
+    */
     public static void checkCompositions(String[] words) throws IOException {
         // Create the output file
         BufferedWriter bw = new BufferedWriter(new FileWriter("composed.txt"));
@@ -28,7 +30,9 @@ public class Composition {
         bw.close();
     }
 
-    // This helper method reads the file and returns the words as an array
+    /**
+     * This helper method reads the file and returns the words as an array
+    */
     public static String[] readDictionaryFile() throws IOException {
         // Read the file and split the words
         BufferedReader br = new BufferedReader(new FileReader("dictionary.txt"));
