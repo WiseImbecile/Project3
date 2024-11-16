@@ -7,7 +7,7 @@ public class myWord implements Comparable<myWord>{
         this.word = word;
     }
     /**
-     * we're reversing alphabetical order here
+     * overriding object method we're reversing alphabetical order here
      * @param otherWord object being compared
      * 
      */

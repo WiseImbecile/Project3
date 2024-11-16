@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Scanner;
 
 
 
@@ -15,9 +16,31 @@ public class Project3 {
 
         test.read_file_and_sort(file);
 
+        // File paths
+        String inputFilePath = "dictionary.txt";
+        String outputFilePath = "almostPalOutput.txt";
+
+        try {
+            // Call the processFile method
+            AlmostPalTest.processFile(inputFilePath, outputFilePath);
+        } catch (FileNotFoundException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
 
 
+        
+        try {
+            // Read the dictionary file and get the words
+            String[] words = Composition.readDictionaryFile();
 
+            // Check compositions for the words and write to composed.txt
+            Composition.checkCompositions(words);
+
+            System.out.println("Compositions have been written to composed.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
 
     }
     
