@@ -1,4 +1,0 @@
-car
-cat
-dog
-tap

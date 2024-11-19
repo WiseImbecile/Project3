@@ -1,2 +1,0 @@
-racecar:race car
-civicdeed:civic deed
