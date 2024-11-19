@@ -17,7 +17,13 @@ public class Composition2 {
         writer.close();
     }
 
-    // Recursive method to find compositions of three or more words
+    /** Recursive method to find compositions of three or more words
+     * @param targetWord String
+     * @param words String array
+     * @param currentComposition String
+     * @param wordCount int
+     * @param writer PrintWriter object
+     */
     private static void findCompositions(String targetWord, String[] words, String currentComposition, int wordCount, PrintWriter writer) {
         // Base case: If the targetWord is empty and at least three words form it, write the result
         if (targetWord.isEmpty() && wordCount >= 3) {
@@ -40,7 +46,9 @@ public class Composition2 {
         }
     }
 
-    // Reads the words from the dictionary file using Scanner
+    /**
+     * Reads the words from the dictionary file using Scanner
+     */
     public static String[] readDictionaryFile() throws IOException {
         Scanner scanner = new Scanner(new File("dictionary.txt"));
         StringBuilder content = new StringBuilder();

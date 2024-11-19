@@ -36,7 +36,10 @@ public class SortTest {
         return file_path;
     }
 
-    //new method
+    /**
+     * reads file and sorts it
+     * @param file
+     */
 
     public void read_file_and_sort(File file){
         int count = 0;

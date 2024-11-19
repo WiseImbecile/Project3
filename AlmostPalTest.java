@@ -27,9 +27,9 @@ public class AlmostPalTest {
     /**
      * Recursively determines if a word is an almost palindrome.
      *
-     * @param word           The word to check.
-     * @param leftIndex      The left index of the word.
-     * @param rightIndex     The right index of the word.
+     * @param word The word to check.
+     * @param leftIndex The left index of the word.
+     * @param rightIndex The right index of the word.
      * @param changesAllowed The number of changes allowed.
      * @return True if the word is an almost palindrome, false otherwise.
      */

@@ -63,7 +63,9 @@ public class myWord implements Comparable<myWord>{
         return num;
     }
 
-    
+    /**
+     * returns the word in myWord param
+     */
     @Override
     public String toString() {
         
